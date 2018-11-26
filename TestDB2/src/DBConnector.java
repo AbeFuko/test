@@ -1,12 +1,13 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
 /**
  * <p>MySQLに接続するためのユーティリティクラスです。<br>
  * ルートアカウントにてDBに接続されます。</p>
  */
 
-/**
- * @author testuser
- *
- */
 public class DBConnector {
 	/**
 	 * JDBC ドライバー名
@@ -28,7 +29,17 @@ public class DBConnector {
 	 */
 	private static String password = "mysql";
 
-
-
-
+public Connection getConnection() {
+	Connection con = null;
+	try {
+		Class.forName(driverName);
+		con = DriverManager.getConnection(url, user, password);
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	return con;
+	}
 }
+
