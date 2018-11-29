@@ -33,7 +33,7 @@
 	<p><%= Math.random() %></p>
 
 	<p>お名前を入力してください。</p>
-	<form method="post" action="getting-out.jsp">
+	<form method="post" action="greeting-out.jsp">
 		<input type="text" name="user">
 		<input type="submit" value="確定">
 	</form>
