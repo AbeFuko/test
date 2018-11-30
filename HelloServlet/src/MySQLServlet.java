@@ -42,13 +42,13 @@ public class MySQLServlet extends HttpServlet {
 		Connection con = null;
 		String url = "jdbc:mysql://localhost/testdb";
 		String user = "root";
-		String password = "";
+		String password = "mysql";
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			conn = DriverManager.getConnection(url, user, password);
+			con = DriverManager.getConnection(url, user, password);
 
-			Statement stmt = conn.createStatement();
+			Statement stmt = con.createStatement();
 			String sql = "select * from test_table";
 			ResultSet rs = stmt.executeQuery(sql);
 
@@ -72,8 +72,8 @@ public class MySQLServlet extends HttpServlet {
 			out.println("Exception:" + e.getMessage());
 		} finally {
 			try {
-				if(conn != null) {
-					conn.close();
+				if(con != null) {
+					con.close();
 				}
 			} catch(SQLException e) {
 			out.println("SQLException:" + e.getMessage());
