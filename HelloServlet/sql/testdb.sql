@@ -1,6 +1,6 @@
-drop database if exists testdb;
-create database testdb;
-use testdb;
+drop database if exists testdb_abe;
+create database testdb_abe;
+use testdb_abe;
 
 create table test_table(
 	user_id int,
