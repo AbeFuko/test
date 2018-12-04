@@ -1,0 +1,49 @@
+package com.internousdev.webproj2.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+import com.internousdev.webproj2.util.DBConnector;
+
+/**
+ * Servlet implementation class TestDAO
+ */
+@WebServlet("/TestDAO")
+public class TestDAO {
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public int insert(String username, String password) {
+        int ret = 0;
+        DBConnector db = new DBConnector();
+        Connection con = db.getConnection();
+
+        String sql = "insert into users(user_name, password) values(?,?)";
+
+        try {
+        	PreparedStatement ps = con.prepareStatement(sql);
+        	ps.setString(1, username);
+        	ps.setString(2, password);
+        	int i = ps.executeUpdate();
+
+        	if(i>0) {
+        		System.out.print(i + "件登録されました");
+        		ret = i;
+        	}
+        } catch(SQLException e) {
+        	e.printStackTrace();
+        }
+
+        try {
+        	con.close();
+        } catch(SQLException e) {
+        	e.printStackTrace();
+        }
+
+        return ret;
+    }
+}
