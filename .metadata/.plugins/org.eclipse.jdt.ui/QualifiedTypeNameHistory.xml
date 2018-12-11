@@ -4,4 +4,6 @@
 <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.internousdev.template.util.DBConnector"/>
+<fullyQualifiedTypeName name="org.apache.struts2.RequestUtils"/>
 </qualifiedTypeNameHistroy>
