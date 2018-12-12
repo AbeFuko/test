@@ -1,4 +1,4 @@
-Tue Dec 11 13:03:51 JST 2018
+Wed Dec 12 10:15:13 JST 2018
 ERROR org.eclipse.rse.ui  Error creating temp project
 org.eclipse.core.internal.resources.ResourceException: 'RemoteSystemsTempFiles' のプロジェクト記述ファイル (.project) の読み取りに失敗しました。 ファイルはディスク上で変更され、現在は無効な情報を含んでいます。 記述ファイルが有効な状態に復元されるまで、プロジェクトは正しく機能しません。
 	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:897)
