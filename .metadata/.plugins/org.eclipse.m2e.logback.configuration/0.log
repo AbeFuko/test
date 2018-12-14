@@ -594,3 +594,4 @@ java.net.SocketException: Software caused connection abort: recv failed
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
 2018-12-12 10:15:35,436 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2018-12-14 10:40:40,660 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
