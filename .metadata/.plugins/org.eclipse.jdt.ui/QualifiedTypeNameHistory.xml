@@ -8,4 +8,5 @@
 <fullyQualifiedTypeName name="org.apache.struts2.RequestUtils"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>

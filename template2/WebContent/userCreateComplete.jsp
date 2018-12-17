@@ -10,7 +10,7 @@
 		<meta http-equiv="imagetoolbar" content="no">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<title>LOGIN</title>
+		<title>USER CREATE COMPLETE</title>
 
 		<style type="text/css">
 			body {
@@ -58,40 +58,27 @@
 
 	<body>
 
-		<div id="header">
-			<div id="pr">
-			</div>
+	<div id="header">
+		<div id="pr">
+		</div>
+	</div>
+
+	<div id="main">
+		<div id="top">
+			<p>UserCreateComplete</p>
 		</div>
 
-		<div id="main">
-			<div id="top">
-				<p>Login</p>
-			</div>
+		<h3>ユーザーの登録が完了致しました。</h3>
 
-			<div>
-				<h3>商品を購入する際にはログインをお願いします。</h3>
-
-				<s:form action="LoginAction">
-					<input type="text" name="userID" placeholder="UserID">
-					<br><br>
-					<input type="password" name="loginPass" placeholder="LoginPass">
-					<br><br>
-					<s:submit value="ログイン"/>
-				</s:form>
-				<br>
-
-				<div>
-					<span>新規ユーザー登録は
-						<a href='<s:url action="UserCreateAction"/>'>こちら</a>
-					</span>
-				</div>
-			</div>
+		<div>
+			<a href="<s:url action='HomeAction'/>">ログインへ</a>
 		</div>
+	</div>
 
-		<div id="footer">
-			<div id="pr">
-			</div>
+	<div id="footer">
+		<div id="pr">
 		</div>
+	</div>
 
 	</body>
 </html>
