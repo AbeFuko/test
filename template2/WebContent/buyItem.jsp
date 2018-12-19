@@ -69,7 +69,7 @@
 			</div>
 
 			<div>
-				<s:form>
+				<s:form action="BuyItemAction">
 					<table>
 						<tr>
 							<td>商品名</td>
@@ -111,7 +111,7 @@
 
 				<div>
 					<span>前画面に戻る場合は</span>
-					<a href="<url action="HomeAction"/>">こちら</a>
+					<a href='<s:url action="HomeAction"/>'>こちら</a>
 				</div>
 
 			</div>

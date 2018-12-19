@@ -75,7 +75,7 @@
 				<s:form action="UserCreateCompleteAction">
 					<tr id="box">
 						<td>ログインID：</td>
-						<td><s:property value="loginID" escape="false"/></td>
+						<td><s:property value="loginId" escape="false"/></td>
 					</tr>
 
 					<tr id="box">

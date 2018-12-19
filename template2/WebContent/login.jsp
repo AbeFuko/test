@@ -72,9 +72,13 @@
 				<h3>商品を購入する際にはログインをお願いします。</h3>
 
 				<s:form action="LoginAction">
-					<input type="text" name="userID" placeholder="UserID">
+					<label>ログインID：
+						<input type="text" name="loginId">
+					</label>
 					<br><br>
-					<input type="password" name="loginPass" placeholder="LoginPass">
+					<label>パスワード：
+						<input type="password" name="loginPass">
+					</label>
 					<br><br>
 					<s:submit value="ログイン"/>
 				</s:form>
