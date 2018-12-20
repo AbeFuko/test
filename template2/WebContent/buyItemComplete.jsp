@@ -10,7 +10,7 @@
 		<meta http-equiv="imagetoolbar" content="no">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<title>BUY ITEM CONFIRM</title>
+		<title>BUY ITEM COMPLETE</title>
 
 		<style type="text/css">
 			body {
@@ -58,59 +58,30 @@
 
 	<body>
 
-		<div id="header">
-			<div id="pr">
-			</div>
+	<div id="header">
+		<div id="pr">
+		</div>
+	</div>
+
+	<div id="main">
+		<div id="top">
+			<p>BuyItemComplete</p>
 		</div>
 
-		<div id="main">
-			<div id="top">
-				<p>Buy Item Confirm</p>
-			</div>
+		<div>
+			<p>購入手続きが完了致しました。</p>
 
 			<div>
-				<s:form action="buyItemConfirmAction">
-					<table>
-						<tr>
-							<td>商品名</td>
-							<td><s:property value="session.buyItem_name"/></td>
-						</tr>
-
-						<tr>
-							<td>値段</td>
-							<td>
-								<s:property value="session.buyItem_price"/>
-								<span>円</span>
-							</td>
-						</tr>
-
-						<tr>
-							<td>購入個数</td>
-							<td>
-								<s:property value="session.stock"/>
-								<span>個</span>
-							</td>
-						</tr>
-
-						<tr>
-							<td>支払い方法</td>
-							<td><s:property value="session.pay"/></td>
-						</tr>
-
-						<tr>
-							<td>
-								<s:submit value="完了"/>
-							</td>
-						</tr>
-					</table>
-				</s:form>
+				<a href="<s:url action='MyPageAction'/>">マイページ</a>
+				<span>から購入履歴の確認が可能です。</span>
 			</div>
 		</div>
+	</div>
 
-		<div id="footer">
-			<div id="pr">
-			</div>
+	<div id="footer">
+		<div id="pr">
 		</div>
+	</div>
 
 	</body>
 </html>

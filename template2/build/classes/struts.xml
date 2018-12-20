@@ -30,6 +30,13 @@
 			<result name="success">userCreateComplete.jsp</result>
 		</action>
 
+		<action name="BuyItemAction" class="com.internousdev.template.action2.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+		<action name="BuyItemConfirmAction" class="com.internousdev.template.action2.BuyItemConfirmAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+		</action>
 
 
 	</package>
