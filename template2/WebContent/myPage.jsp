@@ -10,7 +10,7 @@
 		<meta http-equiv="imagetoolbar" content="no">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<title>BUY ITEM CONFIRM</title>
+		<title>MY PAGE</title>
 
 		<style type="text/css">
 			body {
@@ -65,11 +65,12 @@
 
 		<div id="main">
 			<div id="top">
-				<p>Buy Item Confirm</p>
+				<p>MyPage</p>
 			</div>
 
 			<div>
-				<s:form action="BuyItemConfirmAction">
+				<s:if test="session.message == ''">
+					<h3>ご購入情報は以下になります。</h3>
 					<table>
 						<tr>
 							<td>商品名</td>
@@ -79,7 +80,7 @@
 						<tr>
 							<td>値段</td>
 							<td>
-								<s:property value="session.buyItem_price"/>
+								<s:property value="session.total_price"/>
 								<span>円</span>
 							</td>
 						</tr>
@@ -87,23 +88,33 @@
 						<tr>
 							<td>購入個数</td>
 							<td>
-								<s:property value="session.stock"/>
+								<s:property value="session.total_count"/>
 								<span>個</span>
 							</td>
 						</tr>
 
 						<tr>
 							<td>支払い方法</td>
-							<td><s:property value="session.pay"/></td>
-						</tr>
-
-						<tr>
-							<td>
-								<s:submit value="完了"/>
-							</td>
+							<td><s:property value="session.total_payment"/></td>
 						</tr>
 					</table>
-				</s:form>
+
+					<s:form action="MyPageAction">
+						<input type="hidden" name="deleteFlg" value="1">
+						<s:submit value="削除" method="delete"/>
+					</s:form>
+				</s:if>
+
+				<s:if test="session.message !=null">
+					<h3><s:property value="session.message"/></h3>
+				</s:if>
+
+				<div>
+					<br>
+					<span>前画面に戻る場合は</span>
+					<a href="<s:url action='HomeAction'/>">ログアウト</a>
+					<span>をお願いします。</span>
+				</div>
 			</div>
 		</div>
 
