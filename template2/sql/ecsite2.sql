@@ -5,6 +5,8 @@ drop database if exists ecsite2;
 create database ecsite2;
 use ecsite2;
 
+drop table if exists login_user_transaction;
+
 create table login_user_transaction(
 	id int not null primary key auto_increment,
 	login_id varchar(16) unique,

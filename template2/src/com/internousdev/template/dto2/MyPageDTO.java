@@ -2,7 +2,7 @@ package com.internousdev.template.dto2;
 
 public class MyPageDTO {
 
-	private String  itemName;
+	private String itemName;
 	private String totalPrice;
 	private String totalCount;
 	private String payment;
